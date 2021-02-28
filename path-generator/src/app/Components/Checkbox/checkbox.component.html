@@ -1,0 +1,5 @@
+<label class="cbWrapper" [ngClass]="{'active': checked }">
+  <input class="cb" type="checkbox" [checked]="checked" (change)="onClick()" />
+  <div class="cbInput"></div>
+  <div class="cbLabel">{{label}}</div>
+</label>

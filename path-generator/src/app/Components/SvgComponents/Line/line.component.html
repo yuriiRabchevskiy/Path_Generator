@@ -1,0 +1,11 @@
+<svg:line
+  fill="transparent"
+  stroke="var(--text-disabled-color)"
+  stroke-width="0.0005"
+  [attr.x1]="item.x1"
+  [attr.y1]="item.y1"
+  [attr.x2]="item.x2"
+  [attr.y2]="item.y2"
+  attr.pointer-events="none"
+></svg:line>
+<svg:text font-size="0.009" [attr.transform]="'translate(' + item.transformX + ',' + item.transformY + ')'">{{ item.label }}</svg:text>

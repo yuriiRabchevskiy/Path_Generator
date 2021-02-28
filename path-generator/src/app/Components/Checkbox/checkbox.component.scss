@@ -1,0 +1,59 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+}
+
+.cbWrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 32px;
+  position: relative;
+  padding: 4px 0 4px 24px;
+  color: var(--text-disabled-color);
+  cursor: pointer;
+  &.active {
+    color: var(--text-primary-color);
+    .cbInput {
+      border-color: var(--text-primary-color);
+      &:after {
+        color: var(--text-primary-color);
+        content: "✔";
+        line-height: 18px;
+      }
+    }
+  }
+}
+.cb {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0;
+  top: 0;
+}
+
+.cbInput {
+  width: 20px;
+  height: 20px;
+  border: 1px solid;
+  border-color: var(--text-disabled-color);
+  position: absolute;
+  left: 0;
+  top: 6px;
+  border-radius: 2px;
+  text-align: center;
+  &:after {
+    content: '';
+    color: inherit;
+    font-size: 18px;
+  }
+}
+
+.cbLabel {
+  width: 100%;
+  font-size: 16px;
+  color: inherit;
+}

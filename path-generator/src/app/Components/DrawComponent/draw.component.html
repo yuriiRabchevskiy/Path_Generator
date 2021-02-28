@@ -1,0 +1,32 @@
+<div class="container">
+  <svg #svgEl
+    width="87.6%" height="100%" viewBox="0 0 1 1"
+    xmlns="http://www.w3.org/2000/svg" xmlns-xlink="http://www.w3.org/1999/xlink"
+    preserveAspectRatio="none">
+    <rect width="1" height="1" x="0" y="0" fill="#fff"/>
+    <g>
+      <image x="0" y="0" width="1" height="1" href="/assets/images/Photo_FrontRetractedTogether.png"></image>
+    </g>
+    <g class="gridWrapper" *ngIf="showGrid && lines" transform="translate(0, 0)">
+      <g app-line *ngFor="let item of lines.horizontalLines" [item]="item"></g>
+      <g app-line *ngFor="let item of lines.vericalLines" [item]="item"></g>
+    </g>
+
+    <g>
+      <svg width="1" height="1"
+        viewBox="0 0 205 234"
+        x="0" y="0"
+        fill="none" preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
+      >
+        <path
+          fill="transparent"
+          stroke="#000000"
+          strokeOpacity="0.5"
+          strokeWidth="2"
+          strokeDasharray="8,4"
+          d="M127 232.5C108.659 233.215 103 232.5 83.5 232.5C64 232.5 43.5397 231.014 27.9997 222C13.0968 213.356 5.77677 196.078 3.4998 179C0.499821 156.5 0.499589 136.5 7.99972 92.5004C13.0753 62.7242 25.5217 34.3941 37.5 23.0001C58 3.50013 76.2275 0.223868 103 1.50062C133.012 2.93183 152.232 12.8197 172.5 35C181.181 44.5 190.084 58.6207 196 77.0004C201.026 92.6159 203.5 113.596 203.5 130C203.5 147.5 203.5 174 202 188.5C200.768 200.411 200 210 190.5 220C185.43 225.336 179.801 228.065 172.5 229C153.143 231.482 144.928 231.802 127.389 232.485L127 232.5Z', // 'M59.50496,0.36529c0,0 27.7,4.5 47.2,30.5c8.8,11.7 17.7,25.1 19.2,46.2c1.2,17.7 2.6,36.2 -0.2,53.8c-0.6,4.2 -1.5,11.6 -5.8,13.9c-3.6,1.9 -11.1,2.3 -15.3,2.8c-6.9,0.8 -14.2,0.7 -21.2,0.8c-21.9,0.3 -43.8,-2.4 -65.2,-7.1c-14.3,-3.2 -15.7,-21.5 -15.7,-21.5c-1.4,-18.6 0.2,-37.3 3.7,-55.6c1.6,-8.7 3.3,-17.3 6.3,-26.4c3.8,-11.8 5.5,-16.1 11,-22.7c6.6,-8 14.6,-17 36,-14.7z" />
+      </svg>
+    </g>
+  </svg>
+</div>

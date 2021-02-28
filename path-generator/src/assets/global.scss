@@ -1,0 +1,22 @@
+:root {
+  --primary-color: #9c27b0;
+  --primary-lighter-color: #e1bee7;
+  --primary-darker-color: #801797;
+  --text-primary-color: #ffffff;
+  --text-primary-lighter-color: rgba(0, 0, 0, 0.87);
+  --text-disabled-color: #BDBDBD;
+  --accent-color: #393939;
+  --accent-lighter-color: #d7d7d7;
+  --accent-darker-color: #2c2c2c;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: var(--accent-darker-color);
+  color: var(--text-primary-color);
+}
+* {
+  box-sizing: border-box;
+}

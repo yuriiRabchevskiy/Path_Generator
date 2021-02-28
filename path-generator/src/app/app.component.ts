@@ -2,9 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  template: `<router-outlet></router-outlet>`,
+  styleUrls: ['./app.scss'],
 })
-export class AppComponent {
-  title = 'path-generator';
-}
+export class AppComponent {}

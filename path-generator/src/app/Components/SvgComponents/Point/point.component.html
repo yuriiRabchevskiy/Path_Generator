@@ -1,0 +1,11 @@
+<svg:circle
+  #el
+  fill="var(--primary-color)"
+  stroke="var(--text-disabled-color)"
+  stroke-width="0.0005"
+  r="0.005"
+  [attr.cx]="item.x"
+  [attr.cy]="item.y"
+  attr.pointer-events="all"
+  (dblclick)="onRemoveItem()"
+></svg:circle>

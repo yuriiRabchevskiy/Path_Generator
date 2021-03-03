@@ -8,4 +8,8 @@
   [attr.y2]="item.y2"
   attr.pointer-events="none"
 ></svg:line>
-<svg:text font-size="0.009" [attr.transform]="'translate(' + item.transformX + ',' + item.transformY + ')'">{{ item.label }}</svg:text>
+<svg:text
+  font-size="0.009" fill="var(--text-disabled-color)"
+  [attr.transform]="'translate(' + item.transformX + ',' + item.transformY + ') rotate(' + item.rotate + ')'">
+  {{ item.label }}
+</svg:text>

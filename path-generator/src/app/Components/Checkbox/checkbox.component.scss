@@ -14,11 +14,11 @@
   color: var(--text-disabled-color);
   cursor: pointer;
   &.active {
-    color: var(--text-primary-color);
+    color: var(--text-highlight-color);
     .cbInput {
-      border-color: var(--text-primary-color);
+      border-color: var(--text-highlight-color);
       &:after {
-        color: var(--text-primary-color);
+        color: var(--text-highlight-color);
         content: "✔";
         line-height: 18px;
       }

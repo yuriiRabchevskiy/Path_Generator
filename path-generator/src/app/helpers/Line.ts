@@ -10,6 +10,7 @@ export interface ILine {
   y2: number;
   transformX: number;
   transformY: number;
+  rotate: number;
   label: string | number;
 }
 
@@ -36,6 +37,7 @@ export class LinesData implements ILinesData {
         y2: _d,
         transformX: -0.015,
         transformY: _d + 0.003,
+        rotate: 0,
         label: i,
       };
       const _v: ILine = {
@@ -44,8 +46,9 @@ export class LinesData implements ILinesData {
         x2: _d,
         y1: 0,
         y2: 1,
-        transformX: _d - 0.0025,
+        transformX: _d + 0.003,
         transformY: -0.01,
+        rotate: -90,
         label: i,
       };
       this.horizontalLines.push(_h);

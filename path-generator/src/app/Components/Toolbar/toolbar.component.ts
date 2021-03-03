@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActionTypes, SelectedTeethType } from 'src/app/helpers/general';
 import { DrawService } from 'src/app/Services/draw.service';
 
 @Component({
@@ -7,8 +8,11 @@ import { DrawService } from 'src/app/Services/draw.service';
   styleUrls: ['./toolbar.component.scss'],
 })
 export class ToolbarComponent implements OnInit {
+  actionTypes = ActionTypes;
   showGrid: boolean = false;
-  showTeeth: boolean = false;
+  teethTypes = SelectedTeethType;
+  selectedTeeth: SelectedTeethType | null;
+  activeType: ActionTypes;
   constructor(private drawService: DrawService) {}
 
 
@@ -17,13 +21,22 @@ export class ToolbarComponent implements OnInit {
       this.showGrid = it;
     });
     this.drawService.teethSubject.subscribe(it => {
-      this.showTeeth = it;
+      this.selectedTeeth = it;
+    });
+    this.drawService.actionSubject.subscribe(it => {
+      this.activeType = it;
     });
   }
   onShowGrid($event: boolean) {
     this.drawService.onShowGrid($event);
   }
-  onShowTeeth($event: boolean) {
-    this.drawService.onShowTeeth($event);
+  onShowTeeth(type: SelectedTeethType) {
+    this.drawService.onShowTeeth(type);
+  }
+  onSetAction($event: ActionTypes) {
+    this.drawService.onSetAction($event);
+  }
+  onShowPath() {
+    this.drawService.onSetShowPath(true);
   }
 }

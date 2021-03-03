@@ -1,5 +1,15 @@
 <div class="header">Toolbar</div>
 <div class="content">
   <app-cb label="Show grid lines" [checked]="showGrid" (onChange)="onShowGrid($event)"></app-cb>
-  <app-cb label="Show teeth" [checked]="showTeeth" (onChange)="onShowTeeth($event)"></app-cb>
+  <app-cb label="Show right central" [checked]="selectedTeeth === teethTypes.RIGHT_CENTRAL" (onChange)="onShowTeeth(teethTypes.RIGHT_CENTRAL)"></app-cb>
+  <app-cb label="Show left central" [checked]="selectedTeeth === teethTypes.LEFT_CENTRAL" (onChange)="onShowTeeth(teethTypes.LEFT_CENTRAL)"></app-cb>
+  <app-cb label="Show right lateral" [checked]="selectedTeeth === teethTypes.RIGHT_LATERAL" (onChange)="onShowTeeth(teethTypes.RIGHT_LATERAL)"></app-cb>
+  <app-cb label="Show left lateral" [checked]="selectedTeeth === teethTypes.LEFT_LATERAL" (onChange)="onShowTeeth(teethTypes.LEFT_LATERAL)"></app-cb>
+  <app-cb label="Show right cuspid" [checked]="selectedTeeth === teethTypes.RIGHT_CUSPID" (onChange)="onShowTeeth(teethTypes.RIGHT_CUSPID)"></app-cb>
+  <app-cb label="Show left cuspid" [checked]="selectedTeeth === teethTypes.LEFT_CUSPID" (onChange)="onShowTeeth(teethTypes.LEFT_CUSPID)"></app-cb>
+  <app-cb label="Show right bicuspid" [checked]="selectedTeeth === teethTypes.RIGHT_BICUSPID" (onChange)="onShowTeeth(teethTypes.RIGHT_BICUSPID)"></app-cb>
+  <app-cb label="Show left bicuspid" [checked]="selectedTeeth === teethTypes.LEFT_BICUSPID" (onChange)="onShowTeeth(teethTypes.LEFT_BICUSPID)"></app-cb>
+  <app-button label="+ Insert path" [actionType]="actionTypes.PATH" [active]="activeType === actionTypes.PATH" (onClick)="onSetAction($event)"></app-button>
+  <!-- <app-button label="+ Insert quadrate curve" [actionType]="actionTypes.Q_CURVE" [active]="activeType === actionTypes.Q_CURVE" (onClick)="onSetAction($event)"></app-button> -->
+  <button (click)="onShowPath()">Show path</button>
 </div>

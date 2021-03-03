@@ -1,0 +1,13 @@
+.button {
+  width: auto;
+  height: 24px;
+  padding: 4px 16px 4px 0;
+  color: var(--text-primary-color);
+  outline: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  &.active {
+    color: var(--text-highlight-color);
+  }
+}

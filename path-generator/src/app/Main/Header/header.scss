@@ -1,0 +1,29 @@
+:host {
+  display: flex;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--accent-color);
+  width: 100%;
+  padding: 12px;
+  color: var(--text-primary-color);
+  align-items: center;
+  box-shadow: 0 0 8px 2px var(--accent-lighter-color);
+}
+
+.linkWrapper {
+  display: flex;
+  margin: auto 0;
+}
+
+.link {
+  color: var(--text-primary-color);
+  font-size: 20px;
+  margin: 0 12px;
+  text-decoration: none;
+  &:hover,
+  &.active {
+    color: var(--text-highlight-color);
+  }
+}

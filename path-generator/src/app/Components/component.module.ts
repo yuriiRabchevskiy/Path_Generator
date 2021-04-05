@@ -6,10 +6,11 @@ import { CBComponent } from './Checkbox/checkbox.component';
 import { SvgComponentsModule } from './SvgComponents/svg.module';
 import { ButtonComponent } from './Button/button.component';
 import { PathModalComponent } from './PathModal/path-modal.component';
+import { CanvasComponent } from './CanvasComponent/canvas.component';
 
 @NgModule({
   imports: [CommonModule, SvgComponentsModule],
-  declarations: [DrawComponent, ToolbarComponent, CBComponent, ButtonComponent, PathModalComponent],
-  exports: [DrawComponent, ToolbarComponent, CBComponent, ButtonComponent, PathModalComponent],
+  declarations: [DrawComponent, ToolbarComponent, CBComponent, ButtonComponent, PathModalComponent, CanvasComponent],
+  exports: [DrawComponent, ToolbarComponent, CBComponent, ButtonComponent, PathModalComponent, CanvasComponent],
 })
 export class AppComponentsModule { }

@@ -4,22 +4,24 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './main.component';
 import { AppComponentsModule } from '../Components/component.module';
+import { HeaderComponent } from './Header/header.component';
 
 const routes: Routes = [{
   path: '', component: MainComponent,
-  // children: [
-  //   { path: 'home', loadChildren: () => import('app/other-pages/home/home.module').then(m => m.HomeModule), canActivate: [AuthGuard] },
-  //   { path: 'manage', redirectTo: 'manage/home', pathMatch: 'full' },
-  //   // Unexpected URL handling.
-  //   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  //   { path: '**', redirectTo: 'home', pathMatch: 'full' }
-  // ]
+  children: [
+    { path: 'path-generator', loadChildren: () => import('../../app/path-generator/path-generator.module').then(m => m.PathGeneratorModule) },
+    { path: 'pixel-designer', loadChildren: () => import('../../app/pixel-designer/pixel-designer.module').then(m => m.PixelDesignerModule) },
+    // Unexpected URL handling.
+    { path: '', redirectTo: 'pixel-designer', pathMatch: 'full' },
+    { path: '**', redirectTo: 'pixel-designer', pathMatch: 'full' }
+  ]
 }];
 
 @NgModule({
   imports: [CommonModule, FormsModule, RouterModule, RouterModule.forChild(routes), AppComponentsModule],
   declarations: [
-    MainComponent
+    MainComponent,
+    HeaderComponent,
   ]
 })
 export class MainModule { }

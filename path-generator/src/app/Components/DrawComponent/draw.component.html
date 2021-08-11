@@ -12,53 +12,68 @@
     </g>
 
     <g>
-      <svg *ngIf="selectedTeeth === teethTypes.RIGHT_CENTRAL" width="1" height="1" viewBox="0 0 205 234" x="0" y="0" fill="none" preserveAspectRatio="none"
+      <svg *ngIf="selectedTeeth === teethTypes.RIGHT_CENTRAL && RIGHT_CENTER_TEETH !== null" width="1" height="1" viewBox="0 0 202.5 233.5" x="0" y="0" fill="none" preserveAspectRatio="none"
         xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-        <path fill="transparent" stroke="#000000" strokeOpacity="0.5" strokeWidth="2" strokeDasharray="8,4"
-          d="M78.1255 232.5C96.4662 233.215 102.125 232.5 121.625 232.5C141.125 232.5 161.586 231.014 177.126 222C192.029 213.356 199.349 196.078 201.626 179C204.626 156.5 204.626 136.5 197.126 92.5004C192.05 62.7242 179.604 34.3941 167.625 23.0001C147.125 3.50013 128.898 0.223868 102.125 1.50062C72.114 2.93183 52.8931 12.8197 32.6255 35C23.9447 44.5 15.0414 58.6207 9.12579 77.0004C4.09991 92.6159 1.62549 113.596 1.62549 130C1.62549 147.5 1.62549 174 3.12549 188.5C4.3577 200.411 5.12549 210 14.6255 220C19.6951 225.336 25.3249 228.065 32.6258 229C51.9828 231.482 60.1972 231.802 77.7362 232.485L78.1255 232.5Z" />
-      </svg>
+        <!-- <path fill="transparent" stroke="#000000" strokeOpacity="0.1" strokeWidth="1" strokeDasharray="8,4"
+          d="M78.1255 232.5C96.4662 233.215 102.125 232.5 121.625 232.5C141.125 232.5 161.586 231.014 177.126 222C192.029 213.356 199.349 196.078 201.626 179C204.626 156.5 204.626 136.5 197.126 92.5004C192.05 62.7242 179.604 34.3941 167.625 23.0001C147.125 3.50013 128.898 0.223868 102.125 1.50062C72.114 2.93183 52.8931 12.8197 32.6255 35C23.9447 44.5 15.0414 58.6207 9.12579 77.0004C4.09991 92.6159 1.62549 113.596 1.62549 130C1.62549 147.5 1.62549 174 3.12549 188.5C4.3577 200.411 5.12549 210 14.6255 220C19.6951 225.336 25.3249 228.065 32.6258 229C51.9828 231.482 60.1972 231.802 77.7362 232.485L78.1255 232.5Z" /> -->
+        <path fill="transparent" stroke="#000000" strokeOpacity="0.1" strokeWidth="1" strokeDasharray="8,4"
+          [attr.d]="RIGHT_CENTER_TEETH.defaultPath" />
+        </svg>
 
-      <svg *ngIf="selectedTeeth === teethTypes.LEFT_CENTRAL" width="1" height="1" viewBox="0 0 205 234" x="0" y="0" fill="none" preserveAspectRatio="none"
+      <svg *ngIf="selectedTeeth === teethTypes.LEFT_CENTRAL && LEFT_CENTER_TEETH !== null" width="1" height="1" viewBox="0 0 203.5 233" x="0" y="0" fill="none" preserveAspectRatio="none"
         xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-        <path fill="transparent" stroke="#000000" strokeOpacity="0.5" strokeWidth="2" strokeDasharray="8,4"
-          d="M127 232.5C108.659 233.215 103 232.5 83.5 232.5C64 232.5 43.5397 231.014 27.9997 222C13.0968 213.356 5.77677 196.078 3.4998 179C0.499821 156.5 0.499589 136.5 7.99972 92.5004C13.0753 62.7242 25.5217 34.3941 37.5 23.0001C58 3.50013 76.2275 0.223868 103 1.50062C133.012 2.93183 152.232 12.8197 172.5 35C181.181 44.5 190.084 58.6207 196 77.0004C201.026 92.6159 203.5 113.596 203.5 130C203.5 147.5 203.5 174 202 188.5C200.768 200.411 200 210 190.5 220C185.43 225.336 179.801 228.065 172.5 229C153.143 231.482 144.928 231.802 127.389 232.485L127 232.5Z', // 'M59.50496,0.36529c0,0 27.7,4.5 47.2,30.5c8.8,11.7 17.7,25.1 19.2,46.2c1.2,17.7 2.6,36.2 -0.2,53.8c-0.6,4.2 -1.5,11.6 -5.8,13.9c-3.6,1.9 -11.1,2.3 -15.3,2.8c-6.9,0.8 -14.2,0.7 -21.2,0.8c-21.9,0.3 -43.8,-2.4 -65.2,-7.1c-14.3,-3.2 -15.7,-21.5 -15.7,-21.5c-1.4,-18.6 0.2,-37.3 3.7,-55.6c1.6,-8.7 3.3,-17.3 6.3,-26.4c3.8,-11.8 5.5,-16.1 11,-22.7c6.6,-8 14.6,-17 36,-14.7z" />
-      </svg>
+        <!-- <path fill="transparent" stroke="#000000" strokeOpacity="0.1" strokeWidth="1" strokeDasharray="8,4"
+          d="M127 232.5C108.659 233.215 103 232.5 83.5 232.5C64 232.5 43.5397 231.014 27.9997 222C13.0968 213.356 5.77677 196.078 3.4998 179C0.499821 156.5 0.499589 136.5 7.99972 92.5004C13.0753 62.7242 25.5217 34.3941 37.5 23.0001C58 3.50013 76.2275 0.223868 103 1.50062C133.012 2.93183 152.232 12.8197 172.5 35C181.181 44.5 190.084 58.6207 196 77.0004C201.026 92.6159 203.5 113.596 203.5 130C203.5 147.5 203.5 174 202 188.5C200.768 200.411 200 210 190.5 220C185.43 225.336 179.801 228.065 172.5 229C153.143 231.482 144.928 231.802 127.389 232.485L127 232.5Z', // 'M59.50496,0.36529c0,0 27.7,4.5 47.2,30.5c8.8,11.7 17.7,25.1 19.2,46.2c1.2,17.7 2.6,36.2 -0.2,53.8c-0.6,4.2 -1.5,11.6 -5.8,13.9c-3.6,1.9 -11.1,2.3 -15.3,2.8c-6.9,0.8 -14.2,0.7 -21.2,0.8c-21.9,0.3 -43.8,-2.4 -65.2,-7.1c-14.3,-3.2 -15.7,-21.5 -15.7,-21.5c-1.4,-18.6 0.2,-37.3 3.7,-55.6c1.6,-8.7 3.3,-17.3 6.3,-26.4c3.8,-11.8 5.5,-16.1 11,-22.7c6.6,-8 14.6,-17 36,-14.7z" /> -->
+        <path fill="transparent" stroke="#000000" strokeOpacity="0.1" strokeWidth="1" strokeDasharray="8,4" 
+          [attr.d]="LEFT_CENTER_TEETH.defaultPath" />
+        </svg>
 
-      <svg *ngIf="selectedTeeth === teethTypes.RIGHT_LATERAL" width="1" height="1" viewBox="0 0 145 204" x="0" y="0" fill="none" preserveAspectRatio="none"
+      <svg *ngIf="selectedTeeth === teethTypes.RIGHT_LATERAL && RIGHT_LATERAL_TEETH !== null" width="1" height="1" viewBox="0 0 142.9 201.2" x="0" y="0" fill="none" preserveAspectRatio="none"
         xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-        <path fill="transparent" stroke="#000000" strokeOpacity="0.5" strokeWidth="2" strokeDasharray="8,4"
-          d="M52.5 19.5C41.1763 26.5238 31.4841 31.1399 22 40.5C10.355 51.9926 6.70855 59.3768 4.00006 75.4998C1.63307 89.5899 1.27565 97.714 1.50006 112C1.90442 137.742 2.5 158.501 14.5 176.001C29.5723 197.98 49.4278 204.046 76.0001 202C98.2905 200.283 113.288 194.257 127.5 177C141.5 160.001 142.828 133.936 143 105C143.116 85.4492 141.588 71.6753 137 55.5005C132.412 39.3257 118.353 8.0765 105 3.49902C87.4999 -2.50009 68.0969 9.82567 52.5 19.5Z" />
-      </svg>
+        <!-- <path fill="transparent" stroke="#000000" strokeOpacity="0.1" strokeWidth="1" strokeDasharray="8,4"
+          d="M52.5 19.5C41.1763 26.5238 31.4841 31.1399 22 40.5C10.355 51.9926 6.70855 59.3768 4.00006 75.4998C1.63307 89.5899 1.27565 97.714 1.50006 112C1.90442 137.742 2.5 158.501 14.5 176.001C29.5723 197.98 49.4278 204.046 76.0001 202C98.2905 200.283 113.288 194.257 127.5 177C141.5 160.001 142.828 133.936 143 105C143.116 85.4492 141.588 71.6753 137 55.5005C132.412 39.3257 118.353 8.0765 105 3.49902C87.4999 -2.50009 68.0969 9.82567 52.5 19.5Z" /> -->
+        <path fill="transparent" stroke="#000000" strokeOpacity="0.1" strokeWidth="1" strokeDasharray="8,4"
+          [attr.d]="RIGHT_LATERAL_TEETH.defaultPath" />
+        </svg>
 
-      <svg *ngIf="selectedTeeth === teethTypes.LEFT_LATERAL" width="1" height="1" viewBox="0 0 144 204" x="0" y="0" fill="none" preserveAspectRatio="none"
+      <svg *ngIf="selectedTeeth === teethTypes.LEFT_LATERAL && LEFT_LATERAL_TEETH !== null" width="1" height="1" viewBox="0 0 142.8 202.1" x="0" y="0" fill="none" preserveAspectRatio="none"
         xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-        <path fill="transparent" stroke="#000000" strokeOpacity="0.5" strokeWidth="2" strokeDasharray="8,4"
-          d="M91.9487 19.5C103.272 26.5238 112.965 31.1399 122.449 40.5C134.094 51.9926 137.74 59.3768 140.449 75.4998C142.816 89.5899 143.173 97.714 142.949 112C142.544 137.742 141.949 158.501 129.949 176.001C114.876 197.98 95.0209 204.046 68.4487 202C46.1582 200.283 31.1611 194.257 16.9487 177C2.94873 160.001 1.62065 133.936 1.44873 105C1.33257 85.4492 2.86084 71.6753 7.44873 55.5005C12.0366 39.3257 26.0957 8.0765 39.4487 3.49902C56.9488 -2.50009 76.3518 9.82567 91.9487 19.5Z" />
-      </svg>
+        <!-- <path fill="transparent" stroke="#000000" strokeOpacity="0.1" strokeWidth="1" strokeDasharray="8,4"
+          d="M91.9487 19.5C103.272 26.5238 112.965 31.1399 122.449 40.5C134.094 51.9926 137.74 59.3768 140.449 75.4998C142.816 89.5899 143.173 97.714 142.949 112C142.544 137.742 141.949 158.501 129.949 176.001C114.876 197.98 95.0209 204.046 68.4487 202C46.1582 200.283 31.1611 194.257 16.9487 177C2.94873 160.001 1.62065 133.936 1.44873 105C1.33257 85.4492 2.86084 71.6753 7.44873 55.5005C12.0366 39.3257 26.0957 8.0765 39.4487 3.49902C56.9488 -2.50009 76.3518 9.82567 91.9487 19.5Z" /> -->
+        <path fill="transparent" stroke="#000000" strokeOpacity="0.1" strokeWidth="1" strokeDasharray="8,4"
+          [attr.d]="LEFT_LATERAL_TEETH.defaultPath" />
+        </svg>
 
-      <svg *ngIf="selectedTeeth === teethTypes.RIGHT_CUSPID" width="1" height="1" viewBox="0 0 126 209" x="0" y="0" fill="none" preserveAspectRatio="none"
+      <svg *ngIf="selectedTeeth === teethTypes.RIGHT_CUSPID && RIGHT_CUSPID_TEETH !== null" width="1" height="1" viewBox="0 0 125.7 208.2" x="0" y="0" fill="none" preserveAspectRatio="none"
         xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-        <path fill="transparent" stroke="#000000" strokeOpacity="0.5" strokeWidth="2" strokeDasharray="8,4"
-          d="M40.5003 37C26.5004 53.5 10.7418 76.5776 4.50032 106.5C0.119984 127.5 -3.33786e-06 165 9.50004 181C16.4673 192.734 59.5004 212.163 80.5003 206.5C99.5004 201.376 120.5 159.5 124 115.5C124.999 102.937 126.505 0.999366 95.0003 1C77.5004 1.00035 57.0031 17.5501 40.5003 37Z" />
-      </svg>
+        <!-- <path fill="transparent" stroke="#000000" strokeOpacity="0.1" strokeWidth="1" strokeDasharray="8,4"
+          d="M40.5003 37C26.5004 53.5 10.7418 76.5776 4.50032 106.5C0.119984 127.5 -3.33786e-06 165 9.50004 181C16.4673 192.734 59.5004 212.163 80.5003 206.5C99.5004 201.376 120.5 159.5 124 115.5C124.999 102.937 126.505 0.999366 95.0003 1C77.5004 1.00035 57.0031 17.5501 40.5003 37Z" /> -->
+        <path fill="transparent" stroke="#000000" strokeOpacity="0.1" strokeWidth="1" strokeDasharray="8,4" 
+          [attr.d]="RIGHT_CUSPID_TEETH.defaultPath" />
+        </svg>
 
-      <svg *ngIf="selectedTeeth === teethTypes.LEFT_CUSPID" width="1" height="1" viewBox="0 0 125 209" x="0" y="0" fill="none" preserveAspectRatio="none"
+      <svg *ngIf="selectedTeeth === teethTypes.LEFT_CUSPID && LEFT_CUSPID_TEETH !== null" width="1" height="1" viewBox="0 0 123 208.5" x="0" y="0" fill="none" preserveAspectRatio="none"
         xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-        <path fill="transparent" stroke="#000000" strokeOpacity="0.5" strokeWidth="2" strokeDasharray="8,4"
-          d="M84.8942 37C98.8941 53.5 114.653 76.5776 120.894 106.5C125.275 127.5 125.395 165 115.894 181C108.927 192.734 65.8941 212.163 44.8942 206.5C25.8941 201.376 4.89453 159.5 1.39453 115.5C0.395226 102.937 -1.11089 0.999366 30.3942 1C47.8941 1.00035 68.3914 17.5501 84.8942 37Z" />
-      </svg>
+        <!-- <path fill="transparent" stroke="#000000" strokeOpacity="0.1" strokeWidth="1" strokeDasharray="8,4"
+          d="M84.8942 37C98.8941 53.5 114.653 76.5776 120.894 106.5C125.275 127.5 125.395 165 115.894 181C108.927 192.734 65.8941 212.163 44.8942 206.5C25.8941 201.376 4.89453 159.5 1.39453 115.5C0.395226 102.937 -1.11089 0.999366 30.3942 1C47.8941 1.00035 68.3914 17.5501 84.8942 37Z" /> -->
+         <path fill="transparent" stroke="#000000" strokeOpacity="0.1" strokeWidth="1" strokeDasharray="8,4"
+          [attr.d]="LEFT_CUSPID_TEETH.defaultPath" />
+        </svg>
 
-      <svg *ngIf="selectedTeeth === teethTypes.RIGHT_BICUSPID" width="1" height="1" viewBox="0 0 92 174" x="0" y="0" fill="none" preserveAspectRatio="none"
+      <svg *ngIf="selectedTeeth === teethTypes.RIGHT_BICUSPID && RIGHT_BI_CUSPID_TEETH !== null" width="1" height="1" viewBox="0 0 83 172.6" x="0" y="0" fill="none" preserveAspectRatio="none"
         xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-        <path fill="transparent" stroke="#000000" strokeOpacity="0.5" strokeWidth="2" strokeDasharray="8,4"
-          d="M71 1.50011C63.5 -0.166651 22.4997 37.9999 10.9998 58.4997C0.500198 77.2162 -0.357792 126.489 3.99982 136.999C12.5001 157.5 41.1184 175.715 58 172.5C77 168.882 84.7117 130.836 89.4998 99.9993C92.6829 79.5 88.9997 5.50028 71 1.50011Z" />
-      </svg>
-
-      <svg *ngIf="selectedTeeth === teethTypes.LEFT_BICUSPID" width="1" height="1" viewBox="0 0 91 174" x="0" y="0" fill="none" preserveAspectRatio="none"
+        <!-- <path fill="transparent" stroke="#000000" strokeOpacity="0.1" strokeWidth="1" strokeDasharray="8,4"
+          d="M71 1.50011C63.5 -0.166651 22.4997 37.9999 10.9998 58.4997C0.500198 77.2162 -0.357792 126.489 3.99982 136.999C12.5001 157.5 41.1184 175.715 58 172.5C77 168.882 84.7117 130.836 89.4998 99.9993C92.6829 79.5 88.9997 5.50028 71 1.50011Z" /> -->
+        <path fill="transparent" stroke="#000000" strokeOpacity="0.1" strokeWidth="1" strokeDasharray="8,4"
+          [attr.d]="RIGHT_BI_CUSPID_TEETH.defaultPath" />
+        </svg>
+      <svg *ngIf="selectedTeeth === teethTypes.LEFT_BICUSPID && LEFT_BI_CUSPID_TEETH !== null" width="1" height="1" viewBox="0 0 82.8 172.5" x="0" y="0" fill="none" preserveAspectRatio="none"
         xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-        <path fill="transparent" stroke="#000000" strokeOpacity="0.5" strokeWidth="2" strokeDasharray="8,4"
-          d="M20.5279 1.05285C28.0279 -0.613916 69.0281 37.5527 80.5281 58.0524C91.0276 76.7689 91.8856 126.042 87.528 136.552C79.0278 157.053 50.4095 175.268 33.5278 172.053C14.5278 168.435 6.81618 130.388 2.02798 99.552C-1.15509 79.0527 2.52813 5.05302 20.5279 1.05285Z" />
-      </svg>
+        <!-- <path fill="transparent" stroke="#000000" strokeOpacity="0.1" strokeWidth="1" strokeDasharray="8,4"
+          d="M20.5279 1.05285C28.0279 -0.613916 69.0281 37.5527 80.5281 58.0524C91.0276 76.7689 91.8856 126.042 87.528 136.552C79.0278 157.053 50.4095 175.268 33.5278 172.053C14.5278 168.435 6.81618 130.388 2.02798 99.552C-1.15509 79.0527 2.52813 5.05302 20.5279 1.05285Z" /> -->
+        <path fill="transparent" stroke="#000000" strokeOpacity="0.1" strokeWidth="1" strokeDasharray="8,4"
+          [attr.d]="LEFT_BI_CUSPID_TEETH.defaultPath" />
+        </svg>
     </g>
 
     <g class="pathWrapper">
@@ -67,7 +82,31 @@
     <path id="tempPath" d="" stroke="red" stroke-width="0.005"></path>
     <polyline [attr.points]="polyLine" fill="transparent" stroke="green"  stroke-width="0.0025" />
     <circle id="tempCircle" fill="var(--primary-color)" stroke="var(--text-disabled-color)" stroke-width="0.0005" r="0.005" attr.pointer-events="none"></circle>
-
+    <g *ngIf="selectedTeeth === teethTypes.RIGHT_CENTRAL && RIGHT_CENTER_TEETH !== null">
+      <g app-path [item]="RIGHT_CENTER_TEETH"></g>
+    </g>
+    <g *ngIf="selectedTeeth === teethTypes.LEFT_CENTRAL && LEFT_CENTER_TEETH !== null">
+      <g app-path [item]="LEFT_CENTER_TEETH"></g>
+    </g>
+    <g *ngIf="selectedTeeth === teethTypes.RIGHT_LATERAL && RIGHT_LATERAL_TEETH !== null">
+      <g app-path [item]="RIGHT_LATERAL_TEETH"></g>
+    </g>
+    <g *ngIf="selectedTeeth === teethTypes.LEFT_LATERAL && LEFT_LATERAL_TEETH !== null">
+      <g app-path [item]="LEFT_LATERAL_TEETH"></g>
+    </g>
+    <g *ngIf="selectedTeeth === teethTypes.RIGHT_CUSPID && RIGHT_CUSPID_TEETH !== null">
+      <g app-path [item]="RIGHT_CUSPID_TEETH"></g>
+    </g>
+    <g *ngIf="selectedTeeth === teethTypes.LEFT_CUSPID && LEFT_CUSPID_TEETH !== null">
+      <g app-path [item]="LEFT_CUSPID_TEETH"></g>
+    </g>
+    <g *ngIf="selectedTeeth === teethTypes.RIGHT_BICUSPID && RIGHT_BI_CUSPID_TEETH !== null">
+      <g app-path [item]="RIGHT_BI_CUSPID_TEETH"></g>
+    </g>
+    <g *ngIf="selectedTeeth === teethTypes.LEFT_BICUSPID && LEFT_BI_CUSPID_TEETH !== null">
+      <g app-path [item]="LEFT_BI_CUSPID_TEETH"></g>
+    </g>
+    
   </svg>
 
   <app-path-modal *ngIf="showModal" [value]="pointsByPersenteg" (onClose)="onCloseModal($event)"></app-path-modal>

@@ -3,6 +3,7 @@ import { ActionTypes, createSvgPoint, IBreakPoint, IPoint, SelectedTeethType } f
 import { ILinesData, LinesData } from 'src/app/helpers/Line';
 import { DrawService } from 'src/app/Services/draw.service';
 import * as d3 from 'd3';
+// tslint:disable-next-line: max-line-length
 import { IConvertedPathToPolygon, IDataLine, IDataLineType, ITeethDataObject, LEFT_BI_CUSPID, LEFT_CENTRAL, LEFT_CUSPID, LEFT_LATERAL, RIGHT_BI_CUSPID, RIGHT_CENTRAL, RIGHT_CUSPID, RIGHT_LATERAL } from './constants';
 
 @Component({
@@ -61,28 +62,28 @@ export class DrawComponent implements OnInit, AfterViewInit {
     this.drawService.teethSubject.subscribe(it => {
       this.selectedTeeth = it;
       if (this.selectedTeeth === SelectedTeethType.LEFT_CENTRAL) {
-        this.width = '87.33905579399142%';
+        this.width = '86.83533447684391%';
       }
       if (this.selectedTeeth === SelectedTeethType.RIGHT_CENTRAL) {
-        this.width = '86.7237687366167%';
+        this.width = '87.55364806866953%';
       }
       if (this.selectedTeeth === SelectedTeethType.RIGHT_LATERAL) {
-        this.width = '71.02385685884692%';
+        this.width = '70.71108901044257%';
       }
       if (this.selectedTeeth === SelectedTeethType.LEFT_LATERAL) {
-        this.width = '70.6580900544285%';
+        this.width = '70.59405940594059%';
       }
       if (this.selectedTeeth === SelectedTeethType.RIGHT_CUSPID) {
-        this.width = '60.37463976945245%';
+        this.width = '60.38461538461538%';
       }
       if (this.selectedTeeth === SelectedTeethType.LEFT_CUSPID) {
-        this.width = '58.99280575539568%';
+        this.width = '62.16489630753667%';
       }
       if (this.selectedTeeth === SelectedTeethType.RIGHT_BICUSPID) {
-        this.width = '48.08806488991889%';
+        this.width = '48.02898550724638%';
       }
       if (this.selectedTeeth === SelectedTeethType.LEFT_BICUSPID) {
-        this.width = '48%';
+        this.width = '51.73463177115033%';
       }
     });
     this.drawService.actionSubject.subscribe(it => {
